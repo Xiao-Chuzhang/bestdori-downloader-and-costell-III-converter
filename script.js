@@ -41,8 +41,8 @@ const DB = {
     }
 };
 const App = {
-// 此处可添加代理前缀
-    PROXY_URL: '', API_BASE: 'https://bestdori.com/api/', ASSET_BASE: 'https://bestdori.com/assets/',
+// 此处建议自行搭建代理使用
+    PROXY_URL: 'https://cimfile.pages.dev/', API_BASE: 'https://bestdori.com/api/', ASSET_BASE: 'https://bestdori.com/assets/',
     SERVER: 'jp', SERVER_INDEX: 0, DIFFICULTY_MAP: ['easy', 'normal', 'hard', 'expert', 'special'],
     ITEM_HEIGHT: 236, RENDER_BUFFER: 5,
     songIndex: [], filteredSongIds: [], isFetching: false, downloadingSongs: new Set(), dom: {},
@@ -299,4 +299,5 @@ const App = {
     },
     toggleBackToTopButton() { this.dom.backToTopButton.style.display = (window.scrollY > 300) ? 'flex' : 'none'; }
 };
+
 document.addEventListener('DOMContentLoaded', () => App.init());
