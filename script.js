@@ -219,9 +219,9 @@ const App = {
                         const chart7kData = JSON.parse(await chart7kBlob.text());
                         const { convertedChart } = this.Converter.convert7kTo6kChart(chart7kData);
                         blob = new Blob([JSON.stringify(convertedChart)], { type: 'application/json' });
-                        filename = `${baseFilename}_${difficulty}_bestdori.json`;
+                        filename = `${baseFilename}_${difficulty}_costell iii.json`;
                     } else {
-                        blob = chart7kBlob; filename = `${baseFilename}_${difficulty}_costell iii3.json`;
+                        blob = chart7kBlob; filename = `${baseFilename}_${difficulty}_bestdori.json`;
                     }
                     break;
                 }
@@ -299,6 +299,4 @@ const App = {
     },
     toggleBackToTopButton() { this.dom.backToTopButton.style.display = (window.scrollY > 300) ? 'flex' : 'none'; }
 };
-
 document.addEventListener('DOMContentLoaded', () => App.init());
-
