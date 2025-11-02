@@ -87,7 +87,7 @@ const App = {
             if (isUpdate && songIdsToFetch.length === 0) {
                 this.dom.status.textContent = '数据已为最新。'; this.prepareRender(); return;
             }
-            this.dom.status.textContent = `发现了 ${songIdsToFetch.length} 首新曲目，下载中...`;
+            this.dom.status.textContent = `发现了 ${songIdsToFetch.length} 首新曲目，加载中...`;
             const results = await Promise.allSettled(songIdsToFetch.map(id => this.fetchWithProxy(`${this.API_BASE}songs/${id}.json`)));
             const newSongs = [];
             results.forEach((result, index) => {
@@ -301,3 +301,4 @@ const App = {
 };
 
 document.addEventListener('DOMContentLoaded', () => App.init());
+
